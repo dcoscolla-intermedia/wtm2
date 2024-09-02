@@ -3,22 +3,11 @@
   "name": "wtm-lib",
   "version": "1.0.0",
   "description": "",
-  "exports": {
-    "./api": {
-      "default": "./dist/ApiClient.js",
-      "types": "./dist/src/api/ApiClient.d.ts"
-    },
-    "./useTest": {
-      "default": "./dist/useTest.js",
-      "types": "./dist/src/hooks/useTest.d.ts"
-    },
-    "./interfaces": {
-      "types": "./dist/src/interfaces/index.d.ts"
-    }
-  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "postinstall": "npm run build",
-    "build": "rollup --config",
+    "postinstall": "rm -rf ./dist && tsc",
+    "build": "tsc",
     "watch": "tsc -w"
   },
   "author": "",

@@ -1,5 +1,5 @@
 import { authStore } from '../store';
-import { ApiClient } from 'wtm-lib/ApiClient';
+import { ApiClient } from 'wtm-lib';
 
 export const apiClient: ApiClient = new ApiClient({
   getServerUrl: async () => {

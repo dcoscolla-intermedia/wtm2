@@ -27,7 +27,7 @@ import {
   ValidateRecoveryCodeErrorResponse,
   ValidateRecoveryCodeResponse,
   VerifyCodeData,
-} from '@/interfaces/index';
+} from '../interfaces';
 
 interface ApiClientOptions {
   getServerUrl: () => Promise<string>;

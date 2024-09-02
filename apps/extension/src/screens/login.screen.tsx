@@ -11,7 +11,7 @@ import {
 import { ServerUrlEditable } from '../components';
 import { useLogin } from '../hooks';
 import { useAuthStore, useNavigation } from '../store';
-import { isLoginRes } from 'wtm-lib/interfaces';
+import { isLoginRes } from 'wtm-lib';
 
 import clsx from 'clsx';
 import { updateIcon } from '../utils/updateIcon';

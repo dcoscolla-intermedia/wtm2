@@ -1,0 +1,3 @@
+{
+  "extends": "@wtm/typescript-config/react-library.json",
+}

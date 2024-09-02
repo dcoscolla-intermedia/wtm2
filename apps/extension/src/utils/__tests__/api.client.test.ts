@@ -1,4 +1,4 @@
-import { LoginData, LoginResponse } from 'wtm-lib/interfaces';
+import { LoginData, LoginResponse } from 'wtm-lib';
 import { apiClient } from '../api.client';
 
 global.fetch = jest.fn(() => {

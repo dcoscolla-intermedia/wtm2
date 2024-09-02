@@ -1,4 +1,4 @@
-import { Device } from 'wtm-lib/interfaces';
+import { Device } from 'wtm-lib';
 
 export type SupportedBrowser =
   | 'Chrome'

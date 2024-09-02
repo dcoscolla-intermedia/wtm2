@@ -1,4 +1,4 @@
-import { ApiClient } from 'wtm-lib/api';
+import { ApiClient } from 'wtm-lib';
 
 export const apiClient: ApiClient = new ApiClient({
   getServerUrl: async () => {

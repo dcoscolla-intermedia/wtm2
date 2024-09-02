@@ -25,7 +25,8 @@
     "react-markdown": "^9.0.1",
     "tailwind-merge": "^2.4.0",
     "zustand": "^4.5.4",
-    "wtm-lib": "*"
+    "wtm-lib": "*",
+    "@wtm/ui": "*"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",

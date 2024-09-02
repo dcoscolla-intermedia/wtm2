@@ -2,7 +2,7 @@ import { apiClient } from '../utils/api.client';
 import { DOMtoString, getImages } from '../utils';
 import sanitizeHtml from 'sanitize-html';
 import htmlToMarkdown from '@wcj/html-to-markdown';
-import { CreateNavigationEntry } from 'wtm-lib/interfaces';
+import { CreateNavigationEntry } from 'wtm-lib';
 
 function onUrlChange(callback: () => void) {
   let lastUrl = location.href;

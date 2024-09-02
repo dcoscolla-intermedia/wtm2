@@ -10,7 +10,7 @@ import {
 import { MdLogout } from 'react-icons/md';
 
 import { useNavigation } from '../store';
-import { ActiveSession } from 'wtm-lib/interfaces';
+import { ActiveSession } from 'wtm-lib';
 import {
   useCloseActiveSession,
   useGetActiveSessions,
@@ -78,7 +78,7 @@ export const ActiveSessionsScreen: React.FC<object> = () => {
     );
     const isCurrentDevice = session.userDevice.isCurrentDevice;
 
-    let name = deviceAlias || `${browserName} - ${deviceModel || osName} `;
+    const name = deviceAlias || `${browserName} - ${deviceModel || osName} `;
 
     const handleCloseActiveSession = () => {
       closeActiveSessionMutation.mutate({

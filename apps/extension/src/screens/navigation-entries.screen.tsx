@@ -20,7 +20,7 @@ import {
 import { BsStars } from 'react-icons/bs';
 import { IconType } from 'react-icons';
 
-import { CompleteNavigationEntryDto } from 'wtm-lib/interfaces';
+import { CompleteNavigationEntryDto } from 'wtm-lib';
 import { useDeleteNavigationEntry, useNavigationEntries } from '../hooks';
 
 import { useNavigation } from '../store';
@@ -30,7 +30,7 @@ import clsx from 'clsx';
 
 import { updateIcon } from '../utils/updateIcon';
 
-import { useTest } from 'wtm-lib/useTest';
+import { useTest } from 'wtm-lib';
 
 const truncateString = (str: string, maxLength: number) => {
   return str.length <= maxLength ? str : str.slice(0, maxLength) + '...';
