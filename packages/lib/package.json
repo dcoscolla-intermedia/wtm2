@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "name": "wtm-lib",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./api": {
+      "default": "./dist/ApiClient.js",
+      "types": "./dist/src/api/ApiClient.d.ts"
+    },
+    "./useTest": {
+      "default": "./dist/useTest.js",
+      "types": "./dist/src/hooks/useTest.d.ts"
+    },
+    "./interfaces": {
+      "types": "./dist/src/interfaces/index.d.ts"
+    }
+  },
+  "scripts": {
+    "postinstall": "npm run build",
+    "build": "rollup --config",
+    "watch": "tsc -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.21.2"
+  }
+}

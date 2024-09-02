@@ -1,18 +1,86 @@
 import { CreateNavigationEntry } from 'wtm-lib/interfaces';
 import { DOMtoString, getImages } from '../utils';
 import { apiClient } from '../utils/api.client';
-import sanitizeHtml from "sanitize-html";
-import htmlToMarkdown from "@wcj/html-to-markdown";
+import sanitizeHtml from 'sanitize-html';
+import htmlToMarkdown from '@wcj/html-to-markdown';
+
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 function sanitizeAndConvertToMarkdown(html: string) {
   const sanitizedHtml = sanitizeHtml(html, {
     allowedTags: [
-      "address", "article", "aside", "footer", "header", "h1", "h2", "h3", "h4", "h5", "h6", "hgroup", "main", "nav", "section",
-      "blockquote", "dd", "div", "dl", "dt", "figcaption", "figure", "hr", "li", "main", "ol", "p", "pre", "ul", "a", "abbr", "b", "bdi", "bdo",
-      "br", "cite", "code", "data", "dfn", "em", "i", "kbd", "mark", "q", "rb", "rp", "rt", "rtc", "ruby", "s", "samp", "small", "span", "strong",
-      "sub", "sup", "time", "u", "var", "wbr", "caption", "col", "colgroup", "table", "tbody", "td", "tfoot", "th", "thead", "tr"
+      'address',
+      'article',
+      'aside',
+      'footer',
+      'header',
+      'h1',
+      'h2',
+      'h3',
+      'h4',
+      'h5',
+      'h6',
+      'hgroup',
+      'main',
+      'nav',
+      'section',
+      'blockquote',
+      'dd',
+      'div',
+      'dl',
+      'dt',
+      'figcaption',
+      'figure',
+      'hr',
+      'li',
+      'main',
+      'ol',
+      'p',
+      'pre',
+      'ul',
+      'a',
+      'abbr',
+      'b',
+      'bdi',
+      'bdo',
+      'br',
+      'cite',
+      'code',
+      'data',
+      'dfn',
+      'em',
+      'i',
+      'kbd',
+      'mark',
+      'q',
+      'rb',
+      'rp',
+      'rt',
+      'rtc',
+      'ruby',
+      's',
+      'samp',
+      'small',
+      'span',
+      'strong',
+      'sub',
+      'sup',
+      'time',
+      'u',
+      'var',
+      'wbr',
+      'caption',
+      'col',
+      'colgroup',
+      'table',
+      'tbody',
+      'td',
+      'tfoot',
+      'th',
+      'thead',
+      'tr',
     ],
-    allowedAttributes: { a: ["href"] },
+    allowedAttributes: { a: ['href'] },
   });
 
   return htmlToMarkdown({ html: sanitizedHtml.trim() });
@@ -48,9 +116,10 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
           // If body it's present in DOM, we take it from the inital position.
           const htmlContent = results[0].result || '';
 
-          const content = enabledLiteMode == undefined || !enabledLiteMode 
-        ? await sanitizeAndConvertToMarkdown(htmlContent) 
-        : '';
+          const content =
+            enabledLiteMode == undefined || !enabledLiteMode
+              ? await sanitizeAndConvertToMarkdown(htmlContent)
+              : '';
           const navigationEntry: CreateNavigationEntry = {
             url: tab.url!,
             navigationDate: new Date().toISOString(),

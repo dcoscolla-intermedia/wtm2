@@ -30,7 +30,7 @@ import clsx from 'clsx';
 
 import { updateIcon } from '../utils/updateIcon';
 
-import { useTest } from 'wtm-lib/hooks';
+import { useTest } from 'wtm-lib/useTest';
 
 const truncateString = (str: string, maxLength: number) => {
   return str.length <= maxLength ? str : str.slice(0, maxLength) + '...';
