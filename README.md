@@ -4,6 +4,8 @@ Web Time Machine is a cross-platform solution built using React, Vite, and TypeS
 
 Test edit
 
+Test 2
+
 ## Installation
 
 ```bash
