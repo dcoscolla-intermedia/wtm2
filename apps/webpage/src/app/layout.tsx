@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ClientProviders } from '@/providers/ClientProvider';
 import { manifestWeb } from '@/manifest-web';
-import { Card } from '@wtm/ui/card';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} bg-slate-100`}>
         <ClientProviders>{children}</ClientProviders>
-        <Card test='Hello Worldaaaa' />
       </body>
     </html>
   );

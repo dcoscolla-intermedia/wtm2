@@ -4,3 +4,4 @@ app_safari
 app/src/coverage
 node_modules
 .turbo
+build

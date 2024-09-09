@@ -1,4 +1,4 @@
-import { CreateNavigationEntry } from 'wtm-lib';
+import { CreateNavigationEntry } from '@wtm/lib';
 import { DOMtoString, getImages } from '../utils';
 import { apiClient } from '../utils/api.client';
 import sanitizeHtml from 'sanitize-html';

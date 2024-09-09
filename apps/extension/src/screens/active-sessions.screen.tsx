@@ -10,7 +10,7 @@ import {
 import { MdLogout } from 'react-icons/md';
 
 import { useNavigation } from '../store';
-import { ActiveSession } from 'wtm-lib';
+import { ActiveSession } from '@wtm/lib';
 import {
   useCloseActiveSession,
   useGetActiveSessions,

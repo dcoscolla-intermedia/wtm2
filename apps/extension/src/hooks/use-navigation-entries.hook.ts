@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 
 import { apiClient } from '../utils/api.client';
-import { GetNavigationEntriesData } from 'wtm-lib';
+import { GetNavigationEntriesData } from '@wtm/lib';
 import { useHandleSessionExpired } from '.';
 
 export const useNavigationEntries = (params: GetNavigationEntriesData) => {

@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "wtm-lib",
+  "name": "@wtm/lib",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

@@ -8,7 +8,7 @@
     "allowSyntheticDefaultImports": true,
     "target": "ES2021",
     "sourceMap": true,
-    "outDir": "./dist",
+    "outDir": "../../build/backend",
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
@@ -18,7 +18,5 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false
   },
-  "exclude": [
-    "./extensions"
-  ]
+  "exclude": ["./extensions"]
 }

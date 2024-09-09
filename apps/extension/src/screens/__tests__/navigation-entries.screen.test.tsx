@@ -3,7 +3,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { ChakraProvider } from '@chakra-ui/react';
 import { useNavigation } from '../../store';
 import { useDeleteNavigationEntry, useNavigationEntries } from '../../hooks';
-import { CompleteNavigationEntryDto } from 'wtm-lib';
+import { CompleteNavigationEntryDto } from '@wtm/lib';
 import { NavigationEntriesScreen } from '../navigation-entries.screen';
 
 // Mock de useNavigation, useDeleteNavigationEntry y useNavigationEntries

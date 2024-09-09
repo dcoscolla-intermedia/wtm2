@@ -1,5 +1,5 @@
 {
-  "name": "webpage",
+  "name": "@wtm/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -25,7 +25,7 @@
     "react-markdown": "^9.0.1",
     "tailwind-merge": "^2.4.0",
     "zustand": "^4.5.4",
-    "wtm-lib": "*",
+    "@wtm/lib": "*",
     "@wtm/ui": "*"
   },
   "devDependencies": {
