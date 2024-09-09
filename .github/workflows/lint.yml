@@ -1,4 +1,4 @@
-name: ESLint
+name: Run Lint
 
 on:
   pull_request:
@@ -16,12 +16,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18.16.0
+          node-version: 20.17.0
 
       - name: Install dependencies
-        working-directory: backend
         run: npm install
 
       - name: Run ESLint
-        working-directory: backend
         run: npm run lint
